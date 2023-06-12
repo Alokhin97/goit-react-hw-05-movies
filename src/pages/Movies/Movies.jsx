@@ -1,17 +1,18 @@
-import { useState, useEffect } from 'react';
-import { fetchSearchApi } from 'api/fetchApi';
-import { useSearchParams, useLocation } from 'react-router-dom';
-import Notiflix from 'notiflix';
 import {
+  LinkItem,
+  MovieTitle,
   MoviesForm,
   MoviesInput,
   MoviesList,
   MoviesSearchButton,
-  MovieTitle,
-  LinkItem,
 } from '../Pages.styled';
+import { useEffect, useState } from 'react';
+import { useLocation, useSearchParams } from 'react-router-dom';
 
-export const Movies = () => {
+import Notiflix from 'notiflix';
+import { fetchSearchApi } from 'api/fetchApi';
+
+const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [input, setInput] = useState('');
@@ -90,3 +91,5 @@ export const Movies = () => {
     </>
   );
 };
+
+export default Movies;

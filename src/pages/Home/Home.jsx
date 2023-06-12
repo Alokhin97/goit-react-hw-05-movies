@@ -1,18 +1,18 @@
-import { fetchTrendingApi } from '../../api/fetchApi';
-import { useState, useEffect } from 'react';
-import Notiflix from 'notiflix';
-
 import {
-  MoviesList,
   LinkItem,
   MovieTitle,
+  MoviesList,
   TrendingTitle,
 } from '../Pages.styled';
+import { useEffect, useState } from 'react';
 
-export const Home = () => {
+import Notiflix from 'notiflix';
+import { fetchTrendingApi } from '../../api/fetchApi';
+
+const Home = () => {
   const [trendings, setTrendings] = useState([]);
-
   useEffect(() => {
+
     async function moviesFetch() {
       try {
         const { results } = await fetchTrendingApi();
@@ -53,3 +53,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;
