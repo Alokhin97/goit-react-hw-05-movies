@@ -7,10 +7,10 @@ import { NavLink } from "react-router-dom";
 export const App = () => {
   return (
     <>
-       <NavLink to="/">home</NavLink>
+       <NavLink to="/home">home</NavLink>
        <NavLink to="/movies">movies</NavLink>
       <Routes>
-        <Route path="/" index element={ <Home /> } />
+        <Route path="/home" element={ <Home /> } />
         <Route path="/movies" element={ <Movies /> } />
       </Routes>
     </>
