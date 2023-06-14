@@ -1,5 +1,6 @@
-import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
+
+import { lazy } from 'react';
 
 const Layout = lazy(() =>
   import('./Layout').then(module => ({
